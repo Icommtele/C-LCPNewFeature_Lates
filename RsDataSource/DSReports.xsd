@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSReports" targetNamespace="http://tempuri.org/DSReports.xsd" xmlns:mstns="http://tempuri.org/DSReports.xsd" xmlns="http://tempuri.org/DSReports.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSReports" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DSReports" msprop:Generator_DataSetName="DSReports">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtSubsystemInfo" msprop:Generator_RowEvHandlerName="DtSubsystemInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="DtSubsystemInfoRowDeleted" msprop:Generator_RowDeletingName="DtSubsystemInfoRowDeleting" msprop:Generator_RowEvArgName="DtSubsystemInfoRowChangeEvent" msprop:Generator_TablePropName="DtSubsystemInfo" msprop:Generator_RowChangedName="DtSubsystemInfoRowChanged" msprop:Generator_RowChangingName="DtSubsystemInfoRowChanging" msprop:Generator_TableClassName="DtSubsystemInfoDataTable" msprop:Generator_RowClassName="DtSubsystemInfoRow" msprop:Generator_TableVarName="tableDtSubsystemInfo" msprop:Generator_UserTableName="DtSubsystemInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RecordID" msprop:Generator_ColumnPropNameInRow="RecordID" msprop:Generator_ColumnPropNameInTable="RecordIDColumn" msprop:Generator_ColumnVarNameInTable="columnRecordID" msprop:Generator_UserColumnName="RecordID" type="xs:short" minOccurs="0" />
+              <xs:element name="SubSystemIP" msprop:Generator_ColumnPropNameInRow="SubSystemIP" msprop:Generator_ColumnPropNameInTable="SubSystemIPColumn" msprop:Generator_ColumnVarNameInTable="columnSubSystemIP" msprop:Generator_UserColumnName="SubSystemIP" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemName" msprop:Generator_ColumnPropNameInRow="SystemName" msprop:Generator_ColumnPropNameInTable="SystemNameColumn" msprop:Generator_ColumnVarNameInTable="columnSystemName" msprop:Generator_UserColumnName="SystemName" type="xs:string" minOccurs="0" />
+              <xs:element name="PrameterName" msprop:Generator_ColumnPropNameInRow="PrameterName" msprop:Generator_ColumnPropNameInTable="PrameterNameColumn" msprop:Generator_ColumnVarNameInTable="columnPrameterName" msprop:Generator_UserColumnName="PrameterName" type="xs:string" minOccurs="0" />
+              <xs:element name="PrameterValue" msprop:Generator_ColumnPropNameInRow="PrameterValue" msprop:Generator_ColumnPropNameInTable="PrameterValueColumn" msprop:Generator_ColumnVarNameInTable="columnPrameterValue" msprop:Generator_UserColumnName="PrameterValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DateTimeStamp" msprop:Generator_ColumnPropNameInRow="DateTimeStamp" msprop:Generator_ColumnPropNameInTable="DateTimeStampColumn" msprop:Generator_ColumnVarNameInTable="columnDateTimeStamp" msprop:Generator_UserColumnName="DateTimeStamp" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentDate" msprop:Generator_ColumnPropNameInRow="CurrentDate" msprop:Generator_ColumnPropNameInTable="CurrentDateColumn" msprop:Generator_ColumnVarNameInTable="columnCurrentDate" msprop:Generator_UserColumnName="CurrentDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
