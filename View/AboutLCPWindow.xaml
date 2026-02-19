@@ -1,0 +1,153 @@
+﻿<Window x:Class="LCPReportingSystem.View.AboutLCPWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LCPReportingSystem.View"
+        mc:Ignorable="d"
+        Title="AboutLCPWindow" Height="610" Width="800"  WindowStyle="None" Background="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    
+    
+    <Grid>
+        <Border Padding="0" Height="610" Margin="0,0,0,0" BorderThickness="1" BorderBrush="#0064c1" >
+           
+            <StackPanel Margin="20,15,0,0">
+                <Border  Width="235" BorderThickness="0,0,0,2" Height="30" HorizontalAlignment="Left" BorderBrush="#0064c1">
+                    <TextBlock FontSize="20" FontWeight="Bold" Height="25" Width="235"  HorizontalAlignment="Left" Text="LCP REPORTING SYSTEM" Foreground="#0064c1" Margin="0,0,0,0"/>
+                </Border>
+                <TextBlock x:Name="Version" FontSize="18" Foreground="#0064c1" FontWeight="Bold" Margin="0,10,0,10"/>
+
+                <TextBlock TextWrapping="Wrap" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10">
+                The Reporting System is designed to acquire, monitor, and report system health data over a network.
+                It connects through two Ethernet ports linked to Layer 3 LAN switches and supports data communication 
+                using Sniffing, UDP, and SNMP protocols.
+                </TextBlock>
+
+                <TextBlock FontWeight="Bold" FontSize="18" Text="Key Features:" Foreground="#0064c1" Margin="0,10,0,5"/>
+                <TextBlock TextWrapping="Wrap" FontSize="16" FontWeight="SemiBold" >
+                • Live Monitoring via Sniffing, UDP, and SNMP
+                • Data Recording for report generation
+                • Online/Offline data display
+                • Predefined report generation
+                • Archive Management
+                </TextBlock>
+
+                <TextBlock FontWeight="Bold" FontSize="18" Text="Modules:" Foreground="#0064c1" Margin="0,15,0,5"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,5" FontSize="16" FontWeight="SemiBold">
+                • Reporting Software Module: Analyzes SNMP packets from subsystems to determine health status and generate reports.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="16" FontWeight="SemiBold">
+                • Data Acquisition Module: Periodically fetches essential SNMP data from active subsystems in the network.
+                </TextBlock>
+                <StackPanel >
+                    <Border  Width="110" BorderThickness="0,0,0,0" Height="30" Margin="0,10,0,0" HorizontalAlignment="Left" BorderBrush="#0064c1">
+                        <TextBlock FontSize="20" FontWeight="Bold" Height="25" Width="110"  HorizontalAlignment="Left" Text="Checksum:" Foreground="#0064c1" Margin="0,0,0,0"/>
+                    </Border>
+                    <TextBlock TextWrapping="Wrap" FontSize="16" Padding="0,10,0,0" FontWeight="SemiBold">
+                      • LCP Reporting System uses the MD5 hashing algorithm to calculate and verify checksums.
+                    </TextBlock>
+                </StackPanel>
+              
+                <DataGrid ItemsSource="{Binding MibFilesInfo}" AutoGenerateColumns="False" Width="750" Height="Auto" Margin="-28,15,0,0"
+          CanUserAddRows="False" IsReadOnly="True" AlternatingRowBackground="White" RowBackground="White"
+          SelectionMode="Single" SelectionUnit="FullRow">
+
+                    <!-- Column Headers -->
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Height" Value="25"/>
+                            <Setter Property="FontSize" Value="16"/>
+                            <Setter Property="Background" Value="#0064c1"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="5,0,0,0"/>
+                            <Setter Property="BorderBrush" Value="Black"/>
+                            <Setter Property="BorderThickness" Value="0.5"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <!-- Row Style -->
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#d5dae3"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <!-- Cell Style (important!) -->
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#d5dae3"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <!-- Columns -->
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Subsystem" FontWeight="SemiBold" FontSize="14" Binding="{Binding Name}" Width="130"/>
+                        <DataGridTextColumn Header="Checksum" FontWeight="SemiBold" FontSize="14" Binding="{Binding Checksum}" Width="*"/>
+                        <DataGridTemplateColumn Header="File Path" Width="200">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontSize="14" FontWeight="SemiBold" Text="{Binding FilePath}" ToolTip="{Binding FilePath}">
+                        <!--<Hyperlink NavigateUri="{Binding FilePath}" Click="Hyperlink_Click">
+                            <TextBlock Text="{Binding FilePath}" />
+                        </Hyperlink>-->
+                    </TextBlock>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Status" FontSize="14" FontWeight="SemiBold" Binding="{Binding Status}" Width="180"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Button x:Name="BtnClose" Width="100" Height="30" Content="Close" FontSize="14" FontWeight="Bold" Margin="0,15,28,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtnClose_Click">
+                    <Button.Style>
+                        <Style TargetType="Button" >
+                            <Setter Property="Width" Value="100"/>
+                            <Setter Property="Height" Value="25"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="16"/>
+                            <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="bdr_main" Background="#0064C1" BorderBrush="Transparent" BorderThickness="0" CornerRadius="0">
+
+                                           
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="bdr_main" Property="Background" Value="Red"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="bdr_main" Property="Background" Value="#28A745"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                   
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

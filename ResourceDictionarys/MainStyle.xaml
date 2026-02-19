@@ -1,0 +1,429 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <BitmapImage UriSource="/Assarts/SliderMenu.png" x:Key="mainHederIcon"/>
+    <BitmapImage UriSource="/Assarts/R.gif" x:Key="IcommIcon"/>
+    <!--<BitmapImage UriSource="/Assarts/logout.png" x:Key="Imglogout"/>-->
+    <BitmapImage UriSource="/Assarts/LeftArrow.png" x:Key="ExitSlider"/>
+    <BitmapImage UriSource="/Assarts/NavLeft.png" x:Key="LeftNavigation"/>
+    <BitmapImage UriSource="/Assarts/NavRight.png" x:Key="RightNavigation"/>
+
+    <KeyBinding x:Key="CtrlLeftKeyBinding" Key="Left" Command="{Binding MouseDownLeftCommand}"/>
+    <KeyBinding x:Key="CtrlRightKeyBinding" Key="Right" Command="{Binding MouseDownRightCommand}"/>
+
+    <Style TargetType="Button" x:Key="DetailedButtonStyle">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="YellowGreen"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="ToggleButton" x:Key="TempToggleStyle">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="YellowGreen"/>
+                <!-- Change background on mouse over -->
+                <Setter Property="Foreground" Value="White"/>
+                <!-- Change text color on mouse over -->
+            </Trigger>
+            <Trigger Property="IsChecked" Value="True">                
+                <Setter Property="Background" Value="#0064C1"/>
+                <!-- Change background when checked -->
+                <Setter Property="Foreground" Value="White"/>
+                <!-- Change text color when checked -->
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Template">
+
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="6" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+       
+        <Setter Property="Background" Value="#0064C1"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#D6D6D6"/>
+        <Setter Property="BorderThickness" Value="0.5"/>
+    </Style>
+
+
+    <Style TargetType="Grid" x:Key="AlternatingRowStyle">
+        <Style.Triggers>
+            <!-- Trigger for even rows -->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=RowIndex}" Value="0">
+                <DataTrigger.Setters>
+                    <Setter Property="Background" Value="LightGray"/>
+                </DataTrigger.Setters>
+            </DataTrigger>
+            <!-- Trigger for odd rows -->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=RowIndex}" Value="1">
+                <DataTrigger.Setters>
+                    <Setter Property="Background" Value="White"/>
+                </DataTrigger.Setters>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="txtFont_Arial Unicode MS_Regular_16" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial Unicode MS Regular"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style x:Key="txtFont_Arial Unicode MS_Bold_16" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <!--Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"-->
+    <Style TargetType="TextBlock" x:Key="ParametersValText">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS "/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Width" Value="200"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+        <Setter Property="VerticalAlignment" Value="Top"></Setter>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="ParametersGroupText">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="#FF116FA4"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+        <Setter Property="TextAlignment" Value="Left"/>
+    </Style>
+    <Style x:Key="LCP_Text_Base" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+    <Style x:Key="Text_Sub_Header" TargetType="TextBlock" BasedOn= "{StaticResource LCP_Text_Base}">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Width" Value="auto"/>
+        <Setter Property="Height" Value="auto"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="ParametersNameTest">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="subSystemHederText">
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="25"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="TrapText">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Margin" Value="10 0 0 0"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+    </Style>
+    <Style x:Key="RouterHeader3TextBlock" TargetType="TextBlock">
+        <Setter Property="Text" Value="Router Administatus"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+        <Setter Property="Foreground" Value="#ffff"/>
+        <Setter Property="TextDecorations" Value="Underline"/>
+    </Style>
+    <Style x:Key="mainMenuLogoText" TargetType="TextBlock">
+        <Setter Property="Text" Value="Reporting System"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Margin" Value="0 35 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="FlatButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <!-- Remove 3D effects and focus visual effects -->
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="RouterInterfaceStatusText">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS bold"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+
+    <Style x:Key="DatagridTextBlockText" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Background" Value="OrangeRed"/>      
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="BorderBrush" Value="Wheat"/>
+        <Setter Property="BorderThickness" Value="2,0,0,1"/>
+        <Setter Property="Margin" Value="0,0,5,0"/>
+    </Style>
+
+
+    <Style TargetType="TextBlock" x:Key="LcpHeaderTextBlockText">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Background" Value="LightGray"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="LcpTextBlockText">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="0 0 0,0"/>
+        <!--<Setter Property="FontWeight" Value="DemiBold"/>-->
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlockText">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Margin" Value="0 0 0,0"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="TextBlockTextBold">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Margin" Value="0 3 0 3"/>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+    </Style>
+
+    <Style x:Key="txtMainHederCaption" TargetType="TextBlock" BasedOn="{StaticResource txtFont_Arial Unicode MS_Bold_16}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="txtMainHederContent" TargetType="TextBlock" BasedOn="{StaticResource txtFont_Arial Unicode MS_Regular_16}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="txtMainHederContent2" TargetType="TextBlock" BasedOn="{StaticResource txtFont_Arial Unicode MS_Regular_16}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="155"/>
+    </Style>
+
+    <Style x:Key="txtGreetingContent" TargetType="TextBlock" BasedOn="{StaticResource txtFont_Arial Unicode MS_Bold_16}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="155"/>
+    </Style>
+
+    <Style x:Key="TrapGroupText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="OrangeRed"/>
+    </Style>
+
+    <Style x:Key="ObjectTxt" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial Unicode MS Bold"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS Regular"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="BorderHerderText">
+        <Setter Property="BorderThickness" Value="0 0.5 0 0.5"/>
+        <Setter Property="BorderBrush" Value="#063F71"/>
+        <Setter Property="Margin" Value="0 0 0 8"/>
+    </Style>
+    <Style x:Key="RouterHeader3" TargetType="Border">
+        <Setter Property="Margin" Value="18 15 18 0"/>
+    </Style>
+
+    <Style x:Key="RouterHeader2" TargetType="Border">
+        <Setter Property="Margin" Value="18 15 18 0"/>
+        <Setter Property="BorderBrush" Value="#063F71"/>
+        <Setter Property="BorderThickness" Value="0 1 0 1"/>
+    </Style>
+
+    <!--#region Image Style-->
+    <Style x:Key="imgNavigation" TargetType="Image">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="Width" Value="48"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+    <!--#endregion-->
+
+    <Style x:Key="traplist" TargetType="ListView">
+        <Setter Property="Background" Value="#EEEFF3"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+        <Setter Property="FontSize" Value="18"/>
+        <!--<Setter Property="ItemsSource" Value="{Binding Path=dashboard.TrapCollection}"/>-->
+    </Style>
+
+    <Style x:Key="styleTrapListView" TargetType="{x:Type ListViewItem}">
+        <Setter Property="BorderThickness" Value="0, 1, 0, 1"/>
+        <Setter Property="BorderBrush" Value="#EEEFF3"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="bDrItemView"  Background="{TemplateBinding Background}" BorderBrush="#D6D6D6"
+                    BorderThickness="1.5,1.5,1.5,1.5" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="bDrItemView" Value="#EEEFF3"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--<Storyboard x:Key="BlinkAnimation" AutoReverse="True" RepeatBehavior="Forever">
+        <ColorAnimation Storyboard.TargetName="TrapBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                    From="OrangeRed" To="White" Duration="0:0:0.5"/>
+    </Storyboard>-->
+    <Storyboard x:Key="BlinkAnimation" RepeatBehavior="0:0:5">
+        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TrapBorder"
+                                   Storyboard.TargetProperty="Visibility"
+                                   Duration="0:0:1" RepeatBehavior="Forever">
+            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}" />
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Collapsed}" />
+            <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}" />
+        </ObjectAnimationUsingKeyFrames>
+    </Storyboard>
+
+
+    <Style x:Key="styleTrapListViewDashBoard" TargetType="{x:Type ListViewItem}">
+        <Setter Property="BorderThickness" Value="0, 1, 0, 1"/>
+        <Setter Property="BorderBrush" Value="#EEEFF3"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="bDrItemView" Width="375" Background="{TemplateBinding Background}" BorderBrush="#D6D6D6"
+                BorderThickness="1.5,1.5,1.5,1.5" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="bDrItemView" Value="#EEEFF3"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="BigButton">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="0 0 10 0"/>
+        <Setter Property="Command" Value="{Binding LogoutCommand}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"  Background="Transparent">
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <ContentPresenter.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="TextAlignment" Value="Center" />
+                                </Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Width" Value="10" />
+                                    <Setter Property="Margin" Value="0" />
+                                </Style>
+                            </ContentPresenter.Resources>
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="CT_SliderOn" TargetType="{x:Type Button}">
+        <Border x:Name="bdr_newUser">
+            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="bdr_newUser" Property="Background" Value="Transparent"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="bdr_newUser" Property="Background" Value="Transparent"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="CT_SliderExit" TargetType="{x:Type Button}">
+        <Border x:Name="bdr_newUser" BorderThickness="1" BorderBrush="#064352" CornerRadius="15 15 15 15" Background="#064352">
+            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="bdr_newUser" Property="Background" Value="#064352"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="bdr_newUser" Property="Background" Value="Transparent"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ctArrowIcon" TargetType="Button">
+        <Viewbox>
+            <Canvas Width="200" Height="400">
+                <Path Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="35" 
+              Data="M 100,0 h100 v250 h50 l-100,150 -100,-150 h50 v-250" Stretch="Uniform">
+                </Path>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ctCircle"  TargetType="Button">
+        <Viewbox>
+            <Canvas Width="400" Height="400">
+                <Path Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="400" 
+              Data="M0,5A5,5,0,1,0,10,5A5,5,0,1,0,0,5" Stretch="Fill">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="10" Y="10"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+</ResourceDictionary>

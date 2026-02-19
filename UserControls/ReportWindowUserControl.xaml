@@ -1,0 +1,219 @@
+﻿<UserControl x:Class="LCPReportingSystem.UserControls.ReportWindowUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LCPReportingSystem.UserControls"
+             xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+             xmlns:Rslocal="clr-namespace:LCPReportingSystem.Command"
+             xmlns:RsReportView="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms" xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+            d:DesignHeight="795" d:DesignWidth="1500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/ResourceDictionarys/RsReportViewStyle.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  Background="White"  >
+            <StackPanel Orientation="Horizontal" Background="#0064C1" Width="280" Height="30" >
+                <Button x:Name="FilterButton" Margin="0,0,0,0"  Content="Filter"  Click="FilterButton_Click" HorizontalAlignment="Center" Style="{StaticResource btnReportViewFIlter}"></Button>
+                <materialdesign:PackIcon Foreground="White" Height="30" Width="30" Kind="ArrowDropDown" Margin="-120,0,0,0" />
+            </StackPanel>
+            <TextBlock x:Name="txtWindowName"  Height="30"  Padding="500,0,0,0" Width="1120" Background="White"  Foreground="#0064C1" Margin="10,0,0,0"  Text=""  FontSize="18" FontWeight="Bold" ></TextBlock>
+            
+
+        </StackPanel>
+
+      
+        <Border Grid.Column="0" Grid.Row="1" BorderThickness="0" BorderBrush="{StaticResource Brush39525E}">
+           
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="553*"/>
+                    <ColumnDefinition Width="677*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="1" BorderThickness="0 2 0 0" BorderBrush="LightGray" Margin="0,-5,0,0" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <SolidColorBrush Color="White"/>
+                    </Border.Background>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="79*"/>
+                            <ColumnDefinition Width="651*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <WindowsFormsHost Width="630" Height="auto" Margin="50,5,170,5" x:Name="reportViewerHost" 
+                           Visibility="{Binding Path=reports.IsReportViewEnable,Converter={StaticResource ConvertBoleanVisibility}}" Grid.ColumnSpan="2">
+                            <RsReportView:ReportViewer x:Name="RsReportViewer" ReportExport="RsReportViewer_ReportExport" BorderStyle="None"/>
+                        </WindowsFormsHost>
+                    </Grid>
+                </Border>
+
+                <Border  Grid.Column="0"
+                        Visibility="Visible"
+                        Background="#0064C1"
+                        Height="770" Width="280"
+                        Grid.Row="1"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,2,0,0"
+                        CornerRadius="0"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Padding="0"
+                        Margin="0,-5,0,0">  
+
+                    <StackPanel x:Name="FiltersBorder" Width="280"  Orientation="Vertical" Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
+
+                        <!-- From Date -->
+                        <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                            <TextBlock Text="From Date"
+                       Foreground="White"
+                       FontWeight="SemiBold"
+                       FontSize="14" Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+                            <xctk:DateTimePicker x:Name="fromdateTimePicker"
+                                 Width="260"
+                                 Height="28"  Margin="5,2,0,0" Padding="0,0,0,0"
+                                 FontSize="14"
+                                 FontWeight="SemiBold" Format="FullDateTime"   FormatString="dd-MM-yyyy HH:mm:ss"
+                                 VerticalContentAlignment="Center" TextAlignment="Left"
+                                 Value="{Binding Path=reports.RptSeletedFromDate, Mode=TwoWay}"  />
+                        </StackPanel>
+
+                        <!-- To Date -->
+                        <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+                            <TextBlock Text="To Date"
+                       Foreground="White"
+                       FontWeight="SemiBold"
+                       FontSize="14"  Margin="10,0,0,0"
+                      HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+                            <xctk:DateTimePicker x:Name="todateTimePicker"
+                                 Width="260"
+                                 Height="28" Margin="5,0,0,0"  Padding="0,0,0,0" TextAlignment="Left"
+                                 FontSize="14"
+                                 FontWeight="SemiBold"
+                                 VerticalContentAlignment="Center"
+                                 Value="{Binding Path=reports.RptSeletedToDate, Mode=TwoWay}" />
+                        </StackPanel>
+                        <!-- Exercise Combo -->
+                        <StackPanel Orientation="Vertical" Margin="0,10,0,0" HorizontalAlignment="Left">
+                            <TextBlock Text="Exercise"
+                                Foreground="White"
+                                FontWeight="SemiBold"
+                                FontSize="14" Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                />
+                            <ComboBox x:Name="cmbExerciseType"
+                           Width="260" Margin="10,0,0,0"
+                           Height="30"
+                           FontSize="13"
+                           SelectionChanged="cmbExerciseType_SelectionChanged"
+                           ItemsSource="{Binding}"
+                           Style="{StaticResource LineComboStyle}"
+                           ItemContainerStyle="{StaticResource LineComboItems}" />
+                        </StackPanel>
+                        <StackPanel x:Name="SubsystemPanel" Orientation="Vertical" Margin="0,10,0,0" HorizontalAlignment="Left">
+                            <TextBlock Text="Select  SubSystem "
+                             Foreground="White"
+                             FontWeight="SemiBold"
+                             FontSize="14" Margin="10,0,0,0"
+                             VerticalAlignment="Center"
+                             />
+                            <ComboBox x:Name="cmbSubsystem"
+                                Width="260" Margin="10,10,0,0"
+                                Height="30"
+                                FontSize="14"
+                                SelectionChanged="cmbSubsystem_SelectionChanged"
+                                
+                                Style="{StaticResource LineComboStyle}"
+                                ItemContainerStyle="{StaticResource LineComboItems}">   
+                                                                 
+                                    
+                                <ComboBoxItem>Diesel Generator1</ComboBoxItem>
+                                <ComboBoxItem>Diesel Generator2</ComboBoxItem>
+                                <ComboBoxItem>Radio1</ComboBoxItem>
+                                <ComboBoxItem>Radio2</ComboBoxItem>
+                                <ComboBoxItem>Switch1</ComboBoxItem>
+                                <ComboBoxItem>Switch2</ComboBoxItem>
+                                <ComboBoxItem>UPS1</ComboBoxItem>
+                                <ComboBoxItem>UPS2</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <!-- SNMP Type -->
+                        <GroupBox  x:Name="SNMPTypePanel" Header="Data Type" FontSize="14" Height="50" Width="260"  Margin="0,10,0,0" BorderThickness="0.5" Foreground="White" FontWeight="SemiBold">
+                            <StackPanel Orientation="Horizontal" Margin="10,10,0,0" HorizontalAlignment="Left">
+                                <RadioButton GroupName="SnmpType"
+                                     IsChecked="{Binding Path=reports.IsNonTrap}"
+                                     Cursor="Hand"
+                                     Foreground="White"
+                                     Margin="0,0,0,0" Padding="5,-4,0,0">
+                                     <TextBlock Text="Non Trap" FontSize="14" FontWeight="SemiBold"/>
+                                </RadioButton>
+
+                                <RadioButton GroupName="SnmpType"
+                                     IsChecked="{Binding Path=reports.IsTrap}"
+                                     Cursor="Hand" Margin="40,0,10,0" Padding="5,-4,0,0"
+                                     Foreground="White">        
+                                    <TextBlock Text="Trap" FontSize="14" FontWeight="SemiBold"/>
+                                </RadioButton>
+                            </StackPanel>
+
+                        </GroupBox>
+
+
+
+                        <!-- Filter Button -->
+                        <Button x:Name="btnFilter"
+                            Command="{Binding RptFilterReportCommand}"
+                            Margin="10,20,0,10"
+                            Height="35"
+                            Background="#FF116FA4"
+                            Style="{StaticResource btnReportView}" />       
+
+                        <!-- Close Button (Hidden) -->
+                        <Button Command="{Binding RptCloseCommand}"
+                        HorizontalAlignment="Right"
+                        Foreground="Red"
+                        Visibility="Collapsed"
+                        Style="{StaticResource btnReportClose}" />  
+
+
+                    </StackPanel>
+                </Border>
+
+
+            </Grid>
+        </Border>
+        <!--#region user help Popup-->
+        <Popup IsOpen="{Binding Path=reports.IsReportPopupOpen}" StaysOpen="False" Placement="Center" PopupAnimation="Fade" Width="680" Height="250" AllowsTransparency="True" >
+            <Border CornerRadius="6" Width="640" Height="210" Background="{StaticResource GradientBackground3}">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Opacity="0.8"  Color="{StaticResource Color033D5E}" ShadowDepth="10" />
+                </Border.Effect>
+                <Grid>
+                    <StackPanel VerticalAlignment="Center" Margin="8 0 8 0">
+                        <TextBlock Style="{StaticResource txthelpPopup}">
+                 The Reports data can be viewed  by the user clicking the <Run Foreground="#FE4F64">Filter</Run> 
+                 button according to the selected <Run Foreground="{StaticResource BrushF78103}">From Date</Run> 
+                 and <Run Foreground="{StaticResource BrushF78103}">To Date</Run>.
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Button Command="{Binding CancelPopupCommand}" Style="{StaticResource ClosePopPup}" Margin="0 0 10 10"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Popup>
+        <!--#endregion-->
+    </Grid>
+</UserControl>

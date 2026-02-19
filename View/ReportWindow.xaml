@@ -1,0 +1,289 @@
+﻿<Window x:Class="LCPReportingSystem.WindowForm.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:Rslocal="clr-namespace:LCPReportingSystem.Command"
+        xmlns:RsReportView="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms" xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Icon="/Assarts/Reports.png" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized"
+        Title="ReportWindow" Height="600" Width="1000">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/ResourceDictionarys/RsReportViewStyle.xaml"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="{StaticResource rptBackImage}"/>
+    </Window.Background>
+    <Grid>
+      
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Margin="0,0,0,0" Background="#EEEFF3">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Border.Effect>
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="500" />
+                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="500"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="txtWindowName" Grid.Column="0" Foreground="#00517D" Margin="10,15,0,0" HorizontalAlignment="Left" Text="" Width=" 220" FontSize="18" FontWeight="Bold" VerticalAlignment="Top"></TextBlock>
+                <StackPanel Width="200" Grid.Column="0" Margin="0,0,20,0" HorizontalAlignment="Right">
+                    <TextBlock x:Name="txtExerciseType" Grid.Column="0" Foreground="#00517D" Margin="0,0,0,0" HorizontalAlignment="Left" Text="Exercise Type" Width=" 220" FontSize="14" FontWeight="Normal" VerticalAlignment="Top"></TextBlock>
+
+                    <ComboBox x:Name="cmbExerciseType" Width="200" Grid.Column="0" SelectionChanged="cmbExerciseType_SelectionChanged" HorizontalAlignment="Right" Margin="0,0,0,0" Height="26" Style="{StaticResource LineComboStyle}" 
+                        ItemContainerStyle="{StaticResource LineComboItems}"
+                        ItemsSource="{Binding}">           
+                    </ComboBox>
+                </StackPanel>
+                
+                <StackPanel  Grid.Column="1" Orientation="Vertical" Margin="0,0,0,0">
+                    <StackPanel  Orientation="Horizontal">
+                        <TextBlock Text="From Date" Foreground="#00517D" Padding="0,5,0,0" Height="30" FontFamily="Arial Unicode MS Regular" FontSize="16" Margin="5 0 0 0">
+
+                        </TextBlock>
+                        <xctk:DateTimePicker  x:Name="fromdateTimePicker" VerticalContentAlignment="Center" Height="20" Width="150" Margin="10,0,0,0"  
+                             Value="{Binding Path=reports.RptSeletedFromDate,Mode=TwoWay}"  >
+
+                            <xctk:DateTimePicker.Resources>
+                                <Style TargetType="DatePicker">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Background" Value="#94B8D4"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="FontFamily" Value="Arial Unicode MS Regular"/>
+                                </Style>
+                                <Style TargetType="DatePickerTextBox">
+                                    <!--<Setter Property="Background" Value="#94B8D4"/>-->
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="IsReadOnly" Value="True"/>
+                                    <Setter Property="Template" Value="{StaticResource TemplateDatePickerTextBox}"/>
+                                </Style>
+                            </xctk:DateTimePicker.Resources>
+                        </xctk:DateTimePicker>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                        <TextBlock Text="To Date" Foreground="#00517D" FontFamily="Arial Unicode MS Regular" Height="30" Padding="0,5,0,0" FontSize="16" Margin="5 0 0 0">
+
+                        </TextBlock>
+                        <xctk:DateTimePicker   x:Name="todateTimePicker" VerticalContentAlignment="Center" Height="20" Width="150" Margin="10,0,0,0"  
+                        Value="{Binding Path=reports.RptSeletedToDate,Mode=TwoWay}" >
+                            <xctk:DateTimePicker.Effect>
+                                <DropShadowEffect ShadowDepth="0.5" Color="#03284B"/>
+                            </xctk:DateTimePicker.Effect>
+                            <xctk:DateTimePicker.Resources>
+                                <Style TargetType="DatePicker">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Background" Value="#94B8D4"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="FontFamily" Value="Arial Unicode MS Regular"/>
+                                </Style>
+                                <Style TargetType="DatePickerTextBox">
+                                    <!--<Setter Property="Background" Value="#94B8D4"/>-->
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="IsReadOnly" Value="True"/>
+                                    <Setter Property="Template" Value="{StaticResource TemplateDatePickerTextBox}"/>
+                                </Style>
+                            </xctk:DateTimePicker.Resources>
+                        </xctk:DateTimePicker>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel x:Name="SNMPTypePanel" Height="50" Orientation="Vertical" Margin="20,5,0,0" Grid.Column="2" >
+                        <RadioButton GroupName="SnmpType"  Margin="5,0,0,0" IsChecked="{Binding Path=reports.IsNonTrap}" Cursor="Hand" BorderBrush="#00517D">
+                            <RadioButton.BorderThickness>
+                                <Thickness Left="4" Right="4" Top="4" Bottom="4" />
+                            </RadioButton.BorderThickness>
+                            <TextBlock Text="SNMP Non Trap" Foreground="#00517D" FontSize="14" FontFamily="Arial Unicode MS Regular" 
+HorizontalAlignment="Center" Margin="0, 3, 0, 0"/>
+                        </RadioButton>
+
+                        <RadioButton Margin="5,7,0,0" GroupName="SnmpType" IsChecked="{Binding Path=reports.IsTrap}" Cursor="Hand" BorderBrush="#00517D">
+                            <RadioButton.BorderThickness>
+                                <Thickness Left="4" Right="4" Top="4" Bottom="4"/>
+                            </RadioButton.BorderThickness>
+                            <TextBlock Text="SNMP Trap" Foreground="#00517D" FontSize="14" FontFamily="Arial Unicode MS Regular" 
+HorizontalAlignment="Center" Margin="0 3 0 0"/>
+                        </RadioButton>
+                    </StackPanel>
+
+
+                <Button x:Name="btnFilter" Command="{Binding RptFilterReportCommand}" Grid.Column="2" Margin="300,0,0,0" Background="#FF116FA4" Style="{StaticResource btnReportView}"/>
+
+                <Button Command="{Binding RptCloseCommand}" Grid.Column="3" Margin="0,0,0,0" VerticalAlignment="Top" Style="{StaticResource btnReportClose}" HorizontalAlignment="Right" Foreground="Red"/>
+
+            </Grid>
+          
+
+        </Border>
+
+
+          
+        <Border Grid.Column="0" Grid.Row="1" BorderThickness="0 2 0 0" BorderBrush="{StaticResource Brush39525E}">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderThickness="0 0 1 0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="3,0.25" EndPoint="250,350">
+                            <GradientStop Color="#FF116FA4"/>
+                            <GradientStop Color="{StaticResource Color03284B}"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <StackPanel  x:Name="DisplaySubSystemBoarder">
+                            <Menu x:Name="SubsystemsMenu">
+                                <Menu.ItemTemplate>
+                                    <ItemContainerTemplate>
+                                        <VirtualizingStackPanel Orientation="Vertical"/>
+                                    </ItemContainerTemplate>
+                                </Menu.ItemTemplate>
+                                <MenuItem Header="Diesel Generator" Click="MenuItem_Click"  Style="{StaticResource ReportMenu}" 
+                                      Background="{Binding Path=reports.IsRptDgActive,Converter={StaticResource convertColer}}">
+                                    <MenuItem.Icon>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                                            <materialdesign:PackIcon Foreground="Yellow" Height="25" Width="40" Kind="GeneratorPortable" />
+                                        </StackPanel>
+                                    </MenuItem.Icon>
+                                    
+                                </MenuItem>
+                                <MenuItem x:Name="DgCheckBoxMenuItem" Visibility="Collapsed" Style="{StaticResource ReportMenuExpand}">
+                                    <MenuItem.Header>
+                                        <StackPanel HorizontalAlignment="Left" >
+                                            <CheckBox x:Name="Dg1Checkbox" Height="20" Padding="10,-3,0,0" FontSize="14" Margin="0,0,0,0"    Content="Diesel Generator 1" Checked="Dg1Checkbox_Checked" />
+                                            
+                                            <CheckBox x:Name="Dg2Checkbox" Height="20" Padding="10,-3,0,0"  FontSize="14" Margin="0,0,0,0"   Content="Diesel Generator 2" Checked="Dg2Checkbox_Checked"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+                                    
+                                </MenuItem>
+                                <MenuItem Header="Router" Click="MenuItem_Click"  Style="{StaticResource ReportMenu}" 
+                                      Background="{Binding Path=reports.IsRptRouterActive,Converter={StaticResource convertColer}}">
+                                    <MenuItem.Icon>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                                            <materialdesign:PackIcon Foreground="Yellow" Height="25" Width="40" Kind="RouterNetwork" />
+                                        </StackPanel>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem x:Name="RouterCheckBoxMenuItem" Visibility="Collapsed"  Style="{StaticResource ReportMenuExpand}">
+                                    <MenuItem.Header>
+                                        <StackPanel HorizontalAlignment="Left" >
+                                            <CheckBox x:Name="Router1Checkbox" Height="20" Padding="10,-3,0,0" FontSize="14" Margin="0,0,0,0" Content="Router 1" Checked="Router1Checkbox_Checked" />
+                                            <CheckBox x:Name="Router2Checkbox" Height="20" Padding="10,-3,0,0"  FontSize="14" Margin="0,0,0,0" Content="Router 2" Checked="Router2Checkbox_Checked"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+
+                                </MenuItem>
+                                <MenuItem Header="Radio" Click="MenuItem_Click"  Style="{StaticResource ReportMenu}" 
+                                      Background="{Binding Path=reports.IsRptRadioActive,Converter={StaticResource convertColer}}">
+                                    <MenuItem.Icon>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                                            <materialdesign:PackIcon Foreground="Yellow" Height="25" Width="40" Kind="Radio" />
+                                        </StackPanel>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem x:Name="RadioCheckBoxMenuItem" Visibility="Collapsed" Style="{StaticResource ReportMenuExpand}">
+                                    <MenuItem.Header>
+                                        <StackPanel HorizontalAlignment="Left" >
+                                            <CheckBox x:Name="Radio1Checkbox" Height="20" Padding="10,-3,0,0" FontSize="14" Margin="0,0,0,0" Content="Radio 1" Checked="Radio1Checkbox_Checked"/>
+                                            <CheckBox x:Name="Radio2Checkbox" Height="20" Padding="10,-3,0,0"  FontSize="14" Margin="0,0,0,0" Content="Radio 2" Checked="Radio2Checkbox_Checked"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+
+                                </MenuItem>
+                                <MenuItem Header="Switch" Click="MenuItem_Click"  Style="{StaticResource ReportMenu}" 
+                                      Background="{Binding Path=reports.IsRptSwitchActive,Converter={StaticResource convertColer}}">
+                                    <MenuItem.Icon>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                                            <materialdesign:PackIcon Foreground="Yellow" Height="25" Width="40" Kind="Switch" />
+                                        </StackPanel>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem x:Name="SwitchCheckBoxMenuItem" Visibility="Collapsed" Style="{StaticResource ReportMenuExpand}">
+                                    <MenuItem.Header>
+                                        <StackPanel HorizontalAlignment="Left" >
+                                            <CheckBox x:Name="Switch1Checkbox" Height="20" Padding="10,-3,0,0" FontSize="14" Margin="0,0,0,0" Content="Switch 1" Checked="Switch1Checkbox_Checked"/>
+                                            <CheckBox x:Name="Switch2Checkbox" Height="20" Padding="10,-3,0,0"  FontSize="14" Margin="0,0,0,0" Content="Switch 2" Checked="Switch2Checkbox_Checked"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+
+                                </MenuItem>
+                                <MenuItem Header="UPS" Click="MenuItem_Click"  Style="{StaticResource ReportMenu}" 
+                                      Background="{Binding Path=reports.IsRptUpsActive,Converter={StaticResource convertColer}}">
+                                    <MenuItem.Icon>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                                            <materialdesign:PackIcon Foreground="Yellow" Height="25" Width="40" Kind="BatteryCharging60" />
+                                        </StackPanel>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem x:Name="UPSCheckBoxMenuItem" Visibility="Collapsed"  Style="{StaticResource ReportMenuExpand}">
+                                    <MenuItem.Header>
+                                        <StackPanel HorizontalAlignment="Left" >
+                                            <CheckBox x:Name="UPS1Checkbox" Height="20" Padding="10,-3,0,0" FontSize="14" Margin="0,0,0,0" Content="UPS 1" Checked="UPS1Checkbox_Checked"/>
+                                            <CheckBox x:Name="UPS2Checkbox" Height="20" Padding="10,-3,0,0"  FontSize="14" Margin="0,0,0,0" Content="UPS 2" Checked="UPS2Checkbox_Checked"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+
+                                </MenuItem>
+                            </Menu>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Bottom">
+                            <Button BorderThickness="0" Command="{Binding RptHelpCommand}" Style="{StaticResource btnhelp}">
+
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" BorderThickness="0 0 0 0">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF116FA4"/>
+                    </Border.Background>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="79*"/>
+                            <ColumnDefinition Width="651*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <WindowsFormsHost Width="630" Height="auto" Margin="50,5,170,5" x:Name="reportViewerHost" 
+                                          Visibility="{Binding Path=reports.IsReportViewEnable,Converter={StaticResource ConvertBoleanVisibility}}" Grid.ColumnSpan="2">
+                            <RsReportView:ReportViewer x:Name="RsReportViewer" ReportExport="RsReportViewer_ReportExport" BorderStyle="None"/>
+                        </WindowsFormsHost>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <!--#region user help Popup-->
+        <Popup IsOpen="{Binding Path=reports.IsReportPopupOpen}" StaysOpen="False" Placement="Center" PopupAnimation="Fade" Width="680" Height="250" AllowsTransparency="True" >
+            <Border CornerRadius="6" Width="640" Height="210" Background="{StaticResource GradientBackground3}">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Opacity="0.8"  Color="{StaticResource Color033D5E}" ShadowDepth="10" />
+                </Border.Effect>
+                <Grid>
+                    <StackPanel VerticalAlignment="Center" Margin="8 0 8 0">
+                        <TextBlock Style="{StaticResource txthelpPopup}">
+                 The Reports data can be viewed  by the user clicking the <Run Foreground="#FE4F64">Filter</Run> 
+                 button according to the selected <Run Foreground="{StaticResource BrushF78103}">From Date</Run> 
+                 and <Run Foreground="{StaticResource BrushF78103}">To Date</Run>.
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Button Command="{Binding CancelPopupCommand}" Style="{StaticResource ClosePopPup}" Margin="0 0 10 10"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Popup>
+        <!--#endregion-->
+    </Grid>
+</Window>
