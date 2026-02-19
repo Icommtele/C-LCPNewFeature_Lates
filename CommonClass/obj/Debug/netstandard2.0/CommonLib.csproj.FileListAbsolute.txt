@@ -1,0 +1,50 @@
+D:\Git\CommonClass\bin\Debug\netstandard2.0\CommonLib.deps.json
+D:\Git\CommonClass\bin\Debug\netstandard2.0\CommonLib.dll
+D:\Git\CommonClass\bin\Debug\netstandard2.0\CommonLib.pdb
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.AssemblyReference.cache
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfoInputs.cache
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfo.cs
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.CoreCompileInputs.cache
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.sourcelink.json
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.dll
+D:\Git\CommonClass\obj\Debug\netstandard2.0\CommonLib.pdb
+D:\LCPNewFeature\CommonClass\bin\Debug\netstandard2.0\CommonLib.deps.json
+D:\LCPNewFeature\CommonClass\bin\Debug\netstandard2.0\CommonLib.dll
+D:\LCPNewFeature\CommonClass\bin\Debug\netstandard2.0\CommonLib.pdb
+D:\LCPNewFeature\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+D:\LCPNewFeature\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.AssemblyReference.cache
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfoInputs.cache
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfo.cs
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.CoreCompileInputs.cache
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.Up2Date
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.dll
+D:\LCPNewFeature\CommonClass\obj\Debug\netstandard2.0\CommonLib.pdb
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\CommonLib.deps.json
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\CommonLib.dll
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.AssemblyReference.cache
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfoInputs.cache
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfo.cs
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.CoreCompileInputs.cache
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.Up2Date
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.dll
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.pdb
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\CommonLib.pdb
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\CommonLib.deps.json
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\CommonLib.dll
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\CommonLib.pdb
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.AssemblyReference.cache
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfoInputs.cache
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfo.cs
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.CoreCompileInputs.cache
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.Up2Date
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.dll
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.pdb

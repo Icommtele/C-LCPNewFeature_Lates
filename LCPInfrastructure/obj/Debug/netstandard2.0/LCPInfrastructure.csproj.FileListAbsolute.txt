@@ -1,0 +1,30 @@
+D:\LCPNewFeature\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.deps.json
+D:\LCPNewFeature\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+D:\LCPNewFeature\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.AssemblyReference.cache
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfoInputs.cache
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfo.cs
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.CoreCompileInputs.cache
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.dll
+D:\LCPNewFeature\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.pdb
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.deps.json
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.AssemblyReference.cache
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfoInputs.cache
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfo.cs
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.CoreCompileInputs.cache
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.dll
+\\192.168.5.20\Cherlapally Backup\JP\Code Tree\LCP_Latest_Working24122025_DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.pdb
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.deps.json
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.AssemblyReference.cache
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfoInputs.cache
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfo.cs
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.CoreCompileInputs.cache
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.dll
+E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.pdb
