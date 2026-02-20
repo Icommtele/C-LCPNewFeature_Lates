@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\obj\Debug\GeneratedInternalTypeHelper.g.cs
 FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\App.xaml;;
 FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\MainWindow.xaml;;
@@ -23,4 +24,31 @@ FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\View\SwitchInfoPrev
 FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\View\SwitchPreview2.xaml;;
 FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\View\UpsInfoPreview.xaml;;
 FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\View\UPSPreview2.xaml;;
+=======
+﻿
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\App.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\MainWindow.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\ResourceDictionarys\DefaultStyle.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\ResourceDictionarys\UserControlStyle.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\UserControls\LineGraphUserControl.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\UserControls\ManageUserControl.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\UserControls\MultiSelectComboBox.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\UserControls\PasswordUserControl.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\UserControls\ReportWindowUserControl.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\UserControls\SubSysConfigUserControl.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\AboutLCPWindow.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\DGPreview2.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\DieselGenerator.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\Main.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\RadioInfoPreview.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\RadioPrview2.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\ReportWindow.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\RouterInfoPreview.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\Setting.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\SubSystemStatus.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\SwitchInfoPreview.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\SwitchPreview2.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\UpsInfoPreview.xaml;;
+FC:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latest\View\UPSPreview2.xaml;;
+>>>>>>> 5c392be40ed9cf4222e0359b613434cd27fd8b4c
 
