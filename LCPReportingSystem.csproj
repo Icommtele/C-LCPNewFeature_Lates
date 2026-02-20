@@ -620,12 +620,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonClass\CommonLib.csproj">
-      <Project>{e373cd83-1005-4577-a423-45514b19a9a3}</Project>
+    <ProjectReference Include="..\C-LCPNewFeature_Latests\CommonClass\CommonLib.csproj">
+      <Project>{adbe75d6-19f7-80ad-ce91-2049eb59496d}</Project>
       <Name>CommonLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LCPInfrastructure\LCPInfrastructure.csproj">
-      <Project>{90665520-c0a2-4913-b17e-f957e33a59e3}</Project>
+    <ProjectReference Include="..\C-LCPNewFeature_Latests\LCPInfrastructure\LCPInfrastructure.csproj">
+      <Project>{b28f3d8a-db6f-16e3-d717-495b39071a16}</Project>
       <Name>LCPInfrastructure</Name>
     </ProjectReference>
   </ItemGroup>
