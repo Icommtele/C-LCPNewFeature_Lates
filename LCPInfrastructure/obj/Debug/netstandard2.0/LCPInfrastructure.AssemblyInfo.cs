@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LCPInfrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de8fcf2550c4d65957bcf23821795ea424261aee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6164694817ad3ba367075b81fd9f0e174616cd1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LCPInfrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LCPInfrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
