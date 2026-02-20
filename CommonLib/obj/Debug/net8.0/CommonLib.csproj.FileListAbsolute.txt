@@ -1,0 +1,12 @@
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\bin\Debug\net8.0\CommonLib.deps.json
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\bin\Debug\net8.0\CommonLib.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\bin\Debug\net8.0\CommonLib.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.AssemblyInfoInputs.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.AssemblyInfo.cs
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.csproj.CoreCompileInputs.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.sourcelink.json
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\refint\CommonLib.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\CommonLib.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonLib\obj\Debug\net8.0\ref\CommonLib.dll

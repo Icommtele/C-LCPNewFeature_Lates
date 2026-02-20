@@ -28,3 +28,14 @@ E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2
 E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.CoreCompileInputs.cache
 E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.dll
 E:\Srikanth.T\DRDO\LCPNewFeature_Latest\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.deps.json
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.AssemblyReference.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfoInputs.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.AssemblyInfo.cs
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.csproj.CoreCompileInputs.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.sourcelink.json
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\LCPInfrastructure\obj\Debug\netstandard2.0\LCPInfrastructure.pdb

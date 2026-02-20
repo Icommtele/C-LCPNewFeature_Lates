@@ -1,0 +1,64 @@
+{
+    "Community": "public",
+    "Version": "Ver2",
+    "Subsystems": [
+        {
+            //DieselGenerator
+            "Ip": "192.168.10.156",
+            "Oid": "1.3.6.1.4.1.41385",
+            "Subsytem": "DieselGenerator",
+            "SubsystemId": 1
+        },
+        {
+            //UPS
+            "Ip": "192.168.170.137",
+            "Oid": "1.3.6.1.2.1.33",
+            "Subsytem": "UPS",
+            "SubsystemId": 2
+        },
+        {
+
+            //Radio
+            "Ip": "192.168.10.137",
+            "Oid": "1.3.6.1.4.1.21025",
+            "Subsytem": "Radio",
+            "SubsystemId": 3
+        },
+        {
+            //Switch
+            "Ip": "192.168.10.150",
+            "Oid": "1.3.6.1.2.1.2",
+            "Subsytem": "Switch",
+            "SubsystemId": 4
+        },
+        {
+            //DieselGenerator
+            "Ip": "192.168.140.156",
+            "Oid": "1.3.6.1.4.1.41385",
+            "Subsytem": "DieselGenerator2",
+            "SubsystemId": 6
+        },
+        {
+            //UPS
+            "Ip": "192.168.100.137",
+            "Oid": "1.3.6.1.2.1.33",
+            "Subsytem": "UPS2",
+            "SubsystemId": 7
+        },
+        {
+
+            //Radio
+            "Ip": "192.168.160.137",
+            "Oid": "1.3.6.1.4.1.21025",
+            "Subsytem": "Radio2",
+            "SubsystemId": 8
+        },
+        {
+            //Switch
+            "Ip": "192.168.100.150",
+            "Oid": "1.3.6.1.2.1.2",
+            "Subsytem": "Switch2",
+            "SubsystemId": 9
+        }
+    ]
+}

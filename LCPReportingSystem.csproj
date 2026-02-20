@@ -620,12 +620,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonClass\CommonLib.csproj">
-      <Project>{e373cd83-1005-4577-a423-45514b19a9a3}</Project>
+    <ProjectReference Include="CommonClass\CommonLib.csproj">
+      <Project>{cebaa483-a1c2-74d5-df65-15cc5c967279}</Project>
       <Name>CommonLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LCPInfrastructure\LCPInfrastructure.csproj">
-      <Project>{90665520-c0a2-4913-b17e-f957e33a59e3}</Project>
+    <ProjectReference Include="LCPInfrastructure\LCPInfrastructure.csproj">
+      <Project>{ae825129-c966-2c5b-4032-c3527b565a70}</Project>
       <Name>LCPInfrastructure</Name>
     </ProjectReference>
   </ItemGroup>

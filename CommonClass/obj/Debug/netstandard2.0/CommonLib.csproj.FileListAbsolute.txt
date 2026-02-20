@@ -48,3 +48,17 @@ E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\Com
 E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.Up2Date
 E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.dll
 E:\Srikanth.T\DRDO\LCPNewFeature_Latest\CommonClass\obj\Debug\netstandard2.0\CommonLib.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\bin\Debug\netstandard2.0\CommonLib.deps.json
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\bin\Debug\netstandard2.0\CommonLib.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\bin\Debug\netstandard2.0\CommonLib.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\bin\Debug\netstandard2.0\LCPInfrastructure.pdb
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.AssemblyReference.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfoInputs.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.AssemblyInfo.cs
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.CoreCompileInputs.cache
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.sourcelink.json
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.csproj.Up2Date
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.dll
+C:\Users\srikantht\Documents\GitHub\C-LCPNewFeature_Latests\CommonClass\obj\Debug\netstandard2.0\CommonLib.pdb

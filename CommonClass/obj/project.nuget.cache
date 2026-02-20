@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vZRDdq1W7ac=",
+  "dgSpecHash": "eJX8XxNu0Sk=",
   "success": true,
-  "projectFilePath": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\CommonClass\\CommonLib.csproj",
+  "projectFilePath": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\CommonClass\\CommonLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srikantht\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\srikantht\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

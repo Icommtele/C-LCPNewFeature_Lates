@@ -1,0 +1,95 @@
+{
+    "Subsystems": [
+        {
+            
+            "Source_Ip": "192.168.10.156",
+            "Destination_Ip": "192.168.32",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.4.1.41385",
+            "SubsystemName": "Diesel Generator",
+            "SubsystemId": 1,
+            "SubsystemFile": "ConfigDgset.txt"
+        },
+        {
+            
+            "Source_Ip": "192.168.11.137",
+            "Destination_Ip": "192.168.10.20",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.2.1.33",
+            "SubsystemName": "UPS",
+            "SubsystemId": 2,
+            "SubsystemFile": "UPSNonTrapConfigset.txt"
+        },
+        {
+
+            
+            "Source_Ip": "192.168.10.137",
+            "Destination_Ip": "192.168.10.32",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.4.1.21025",
+            "SubsystemName": "Radio",
+            "SubsystemId": 3,
+            "SubsystemFile": "ConfigRadioset.txt"
+        },
+        {
+            
+            "Source_Ip": "192.168.10.150",
+            "Destination_Ip": "192.168.10.157",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.2.1.2",
+            "SubsystemName": "Switch",
+            "SubsystemId": 4,
+            "SubsystemFile": "ConfigSwitchset.txt"
+        },
+        {
+            
+            "Source_Ip": "192.168.10.137",
+            "Destination_Ip": "192.168.10.32",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.4.1.41385",
+            "SubsystemName": "Diesel Generator2",
+            "SubsystemId": 5,
+            "SubsystemFile": "ConfigDgset.txt"
+        },
+        {
+            
+            "Source_Ip": "192.168.22.16",
+            "Destination_Ip": "192.168.10.20",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.2.1.33",
+            "SubsystemName": "UPS2",
+            "SubsystemId": 6,
+            "SubsystemFile": "UPSNonTrapConfigset.txt"
+        },
+        {  
+
+            
+            "Source_Ip": "192.168.20.138",
+            "Destination_Ip": "192.168.10.157",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.4.1.21025",
+            "SubsystemName": "Radio2",
+            "SubsystemId": 7,
+            "SubsystemFile": "ConfigRadioset.txt"
+        },
+        {
+            
+            "Source_Ip": "192.168.20.150",
+            "Destination_Ip": "192.168.10.157",
+            "port": 161,
+            "portTrap": 162,
+            "Oid": "1.3.6.1.2.1.2",
+            "SubsystemName": "Switch2",
+            "SubsystemId": 8,
+            "SubsystemFile": "ConfigSwitchset.txt"
+        }
+
+    ]
+}

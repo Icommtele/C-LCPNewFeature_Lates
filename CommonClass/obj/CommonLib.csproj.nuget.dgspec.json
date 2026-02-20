@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\CommonClass\\CommonLib.csproj": {}
+    "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\CommonClass\\CommonLib.csproj": {}
   },
   "projects": {
-    "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\CommonClass\\CommonLib.csproj": {
+    "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\CommonClass\\CommonLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\CommonClass\\CommonLib.csproj",
+        "projectUniqueName": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\CommonClass\\CommonLib.csproj",
         "projectName": "CommonLib",
-        "projectPath": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\CommonClass\\CommonLib.csproj",
+        "projectPath": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\CommonClass\\CommonLib.csproj",
         "packagesPath": "C:\\Users\\srikantht\\.nuget\\packages\\",
-        "outputPath": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\CommonClass\\obj\\",
+        "outputPath": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\CommonClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\LCPInfrastructure\\LCPInfrastructure.csproj": {
-                "projectPath": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\LCPInfrastructure\\LCPInfrastructure.csproj"
+              "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\LCPInfrastructure\\LCPInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\LCPInfrastructure\\LCPInfrastructure.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\LCPInfrastructure\\LCPInfrastructure.csproj": {
+    "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\LCPInfrastructure\\LCPInfrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\LCPInfrastructure\\LCPInfrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\LCPInfrastructure\\LCPInfrastructure.csproj",
         "projectName": "LCPInfrastructure",
-        "projectPath": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\LCPInfrastructure\\LCPInfrastructure.csproj",
+        "projectPath": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\LCPInfrastructure\\LCPInfrastructure.csproj",
         "packagesPath": "C:\\Users\\srikantht\\.nuget\\packages\\",
-        "outputPath": "E:\\Srikanth.T\\DRDO\\LCPNewFeature_Latest\\LCPInfrastructure\\obj\\",
+        "outputPath": "C:\\Users\\srikantht\\Documents\\GitHub\\C-LCPNewFeature_Latests\\LCPInfrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
